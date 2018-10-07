@@ -1,0 +1,103 @@
+{
+    "name": "catapult",
+    "version": "1.1.0",
+    "description": "HTML/CSS Flat File Scaffold",
+    "main": "public/index.html",
+    "scripts": {
+        "start": "node_modules/gulp/bin/gulp.js serve",
+        "build": "node_modules/gulp/bin/gulp.js build --production",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.0",
+        "babel-plugin-external-helpers": "^6.22.0",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "babel-register": "^6.26.0",
+        "browser-sync": "^2.22.0",
+        "del": "^3.0.0",
+        "eslint": "^4.17.0",
+        "event-stream": "^3.3.4",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^4.0.0",
+        "gulp-changed": "^3.1.1",
+        "gulp-clean-css": "^3.9.0",
+        "gulp-compile-handlebars": "^0.6.1",
+        "gulp-concat": "^2.6.1",
+        "gulp-if": "^2.0.2",
+        "gulp-load-plugins": "^1.5.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-sass": "^3.1.0",
+        "gulp-sass-variables": "^1.1.1",
+        "gulp-size": "^2.1.0",
+        "gulp-sourcemaps": "^2.6.2",
+        "gulp-uglify": "^3.0.0",
+        "gulp-util": "^3.0.8",
+        "node-notifier": "^5.1.2",
+        "path": "^0.12.7",
+        "rollup-plugin-babel": "^3.0.2",
+        "rollup-plugin-commonjs": "^8.4.1",
+        "rollup-plugin-node-builtins": "^2.1.2",
+        "rollup-plugin-node-resolve": "^3.0.0",
+        "rollup-plugin-uglify": "^2.0.1",
+        "rollup-stream": "^1.24.1",
+        "vinyl-buffer": "^1.0.1",
+        "vinyl-source-stream": "^2.0.0",
+        "yargs": "^10.0.3"
+    },
+    "browserslist": [
+        "last 2 versions",
+        ">1%"
+    ],
+    "eslintConfig": {
+        "env": {
+            "browser": true,
+            "commonjs": true,
+            "es6": true
+        },
+        "extends": "eslint:recommended",
+        "parserOptions": {
+            "sourceType": "module"
+        },
+        "rules": {
+            "no-console": [
+                "error",
+                {
+                    "allow": [
+                        "warn",
+                        "error"
+                    ]
+                }
+            ],
+            "indent": [
+                "error",
+                4
+            ],
+            "linebreak-style": [
+                "error",
+                "unix"
+            ],
+            "quotes": [
+                "error",
+                "single"
+            ],
+            "semi": [
+                "error",
+                "always"
+            ]
+        },
+        "overrides": [
+            {
+                "files": "src/*.js"
+            }
+        ]
+    },
+    "babel": {
+        "presets": [
+            "env"
+        ]
+    }
+}

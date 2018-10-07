@@ -1,0 +1,42 @@
+.about {
+    background-color: #f7f7f7;
+    .about-content {
+        text-align: center;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        h2 {
+            margin-bottom: 1.5rem;
+        }
+        p {
+            max-width: 75%;
+            margin: 0 auto;
+        }
+    }
+}
+
+.features {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    h2 {
+        margin-bottom: 4rem;
+    }
+    .features-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                max-width: 5rem;
+            }
+            h3 {
+                font-size: 1rem;
+                font-weight: 900;
+                margin-top: 2rem;
+            }
+        }
+    }
+}

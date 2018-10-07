@@ -1,0 +1,33 @@
+.container {
+    width: 100%;
+    max-width: 100%;
+    @include spacing(margin, left right, auto);
+    @include spacing(padding, left right, $container-gutter);
+
+    @media screen and (min-width: $phone-breakpoint){
+        max-width: calc(#{$phone-container});
+    }
+
+    @media screen and (min-width: $tablet-breakpoint){
+        max-width: calc(#{$tablet-container});
+    }
+
+    @media screen and (min-width: $laptop-breakpoint){
+        max-width: calc(#{$laptop-container});
+    }
+
+    @media screen and (min-width: $desktop-breakpoint){
+        max-width: calc(#{$desktop-container});
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.image-container {
+    img {
+        display: block;
+        width: 100%;
+    }
+}

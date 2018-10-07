@@ -1,0 +1,18 @@
+@mixin set-font($font-family: primary, $font-weight: regular){
+    $font : map-get(map-get($fonts, $font-family), $font-weight);
+    font-family: map-get($font, font-family);
+    font-weight: map-get($font, font-weight);
+}
+
+@mixin spacing($property-name, $position, $value){
+    @if($position == all){
+        #{$property-name}: $value;
+    }
+    @else{
+        $positions: $position;
+        @each $multiplePosition in $positions {
+            $property: #{$property-name}-#{$multiplePosition};
+            #{$property}: $value;
+        }
+    }
+}
