@@ -1,5 +1,5 @@
 .header {
-    padding: 1rem 0;
+    padding: 2rem 0;
     position: fixed;
     width: 100%;
     background-color: white;
@@ -24,6 +24,29 @@
                     text-transform: uppercase;
                     letter-spacing: 2px;
                     font-weight: 800;
+                    transition: color .3s ease;
+                    position: relative;
+                    background-color: $white;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 1.5rem;
+                        height: .8rem;
+                        background-image: url('../assets/crown.svg');
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        z-index:-1;
+                        transition: top .3s ease;
+                    }
+                    &:hover {
+                        color: $primary-color;
+                        &::after {
+                            top: -1rem;
+                        }
+                    }
                 }
             }
         }

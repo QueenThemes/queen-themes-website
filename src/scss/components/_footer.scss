@@ -5,7 +5,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        .logo {
+        img {
+            max-width: 8rem;
+        }
+        .logo-text {
             font-size: 1.5rem;
             text-transform: uppercase;
             letter-spacing: 2px;

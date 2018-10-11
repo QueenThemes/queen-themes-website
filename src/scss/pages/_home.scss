@@ -13,7 +13,9 @@
         }
     }
 }
-
+$thick : 2px;
+$pad : 0.7em;
+$extra : calc(#{$pad} * 1.2);
 .features {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -29,13 +31,98 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 23%;
+            box-shadow: 0px 6px 10px -4px rgba(0,0,0,0.0);
+            transition: box-shadow .6s ease;
+            padding: 1rem;
+            position: relative;
             img {
-                max-width: 5rem;
+                height: 1.5rem;
+                transition: height .6s ease;
             }
             h3 {
                 font-size: 1rem;
                 font-weight: 900;
                 margin-top: 2rem;
+                margin-bottom: .5rem;
+            }
+            .line {
+                position: absolute;
+                background: $primary-color;
+
+                &.-right,
+                &.-left {
+                    width: $thick;
+                    bottom: -$thick;
+                    top: -$thick;
+                    transform: scale3d(1,0,1);
+                }
+
+                &.-top,
+                &.-bottom {
+                    height: $thick;
+                    left: -$thick;
+                    right: -$thick;
+                    transform: scale3d(0,1,1);
+                }
+
+                &.-right {
+                    right: -$thick;
+                    transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.23s;
+                    transform-origin: top;
+                }
+
+                &.-top {
+                    top: -$thick;
+                    transition: transform 0.08s linear 0.43s;
+                    transform-origin: left;
+                }
+
+                &.-left {
+                    left: -$thick;
+                    transition: transform 0.08s linear 0.51s;
+                    transform-origin: bottom;
+                }
+
+                &.-bottom {
+                    bottom: -$thick;
+                    transition: transform 0.3s cubic-bezier(1,0,.65,1.01);
+                    transform-origin: right;
+                }
+            }
+            &:nth-child(even){
+                .line {
+                    background-color: $secondary-color;
+                }
+            }
+            &:hover {
+                box-shadow: 0px 6px 10px -4px rgba(0,0,0,0.42);
+                img {
+                    height: 4rem;
+                }
+                .line {
+                    transform: scale3d(1,1,1);
+
+                    &.-right {
+                        transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.2s;
+                        transform-origin: bottom;
+                    }
+
+                    &.-top {
+                        transition: transform 0.08s linear 0.4s;
+                        transform-origin: right;
+                    }
+
+                    &.-left {
+                        transition: transform 0.08s linear 0.48s;
+                        transform-origin: top;
+                    }
+
+                    &.-bottom {
+                        transition: transform 0.5s cubic-bezier(0,.53,.29,1) 0.56s;
+                        transform-origin: left;
+                    }
+                }
             }
         }
     }
