@@ -1,0 +1,31 @@
+/*=================================*/
+/* Colors */
+/*=================================*/
+$white : #FFFFFF;
+$black : #000000;
+
+$light-grey: #F7F7F7;
+$grey: #9F9F9F;
+$dark-grey: #222222;
+
+/*=================================*/
+/* Typography */
+/*=================================*/
+$primary-font : 'Lato', sans-serif;
+
+/*=================================*/
+/* Breakpoints */
+/*=================================*/
+$phone-breakpoint   : 30rem;
+$tablet-breakpoint  : 48rem;
+$laptop-breakpoint  : 60rem;
+$desktop-breakpoint : 75rem;
+
+/*=================================*/
+/* Container */
+/*=================================*/
+$container-gutter  : 1rem;
+$phone-container   : #{$phone-breakpoint} + (#{$container-gutter} * 2);
+$tablet-container  : #{$tablet-breakpoint} + (#{$container-gutter} * 2);
+$laptop-container  : #{$laptop-breakpoint} + (#{$container-gutter} * 2);
+$desktop-container : #{$desktop-breakpoint} + (#{$container-gutter} * 2);

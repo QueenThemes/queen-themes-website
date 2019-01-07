@@ -1,28 +1,28 @@
-// Normalize
-@import
-'base/normalize';
+/*=================================*/
+/* Base */
+/*=================================*/
+@import 'base/normalize';
 
-// Base
-@import
-'base/colors',
-'base/fonts',
-'base/variables';
+/*=================================*/
+/* Helpers */
+/*=================================*/
+@import 'helpers/variables';
+@import 'helpers/mixins';
 
-// Helpers
-@import
-'helpers/mixins',
-'helpers/helpers';
+/*=================================*/
+/* Layout */
+/*=================================*/
+@import 'layout/layout';
+@import 'layout/typography';
 
-// Layout
-@import
-'layout/typography';
+/*=================================*/
+/* Components */
+/*=================================*/
+@import 'components/footer';
+@import 'components/header';
+@import 'components/hero';
 
-// Components
-@import
-'components/header',
-'components/footer',
-'components/hero';
-
-// Components
-@import
-'pages/home';
+/*=================================*/
+/* Pages */
+/*=================================*/
+@import 'pages/home';

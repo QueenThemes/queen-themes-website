@@ -1,27 +1,31 @@
+/*=================================*/
+/* Typography */
+/*=================================*/
 body {
     color: $black;
-    @include set-font(primary);
-    font-size: $global-font-size;
+    font-family: $primary-font;
+    font-size:  1rem;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
 }
 
 h1 {
-    @include set-font(primary, black);
+    font-weight: 900;
     font-size: 3.5rem;
     line-height: 1.25;
 }
 
 h2 {
-    @include set-font(primary, black);
-    font-size: 2rem;
+    font-weight: 900;
+    font-size: 1.75rem;
     line-height: 1.25;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    @media screen and (min-width: $laptop-breakpoint) {
+        font-size: 2rem;
+    }
 }
 
 h3, h4, h5, h6 {
-    @include set-font(primary, bold);
+    font-weight: 700;
     font-size: 1.25rem;
     line-height: 1.25;
     text-transform: uppercase;
@@ -29,7 +33,7 @@ h3, h4, h5, h6 {
 }
 
 p {
-    font-size: $global-font-size;
+    font-size: 1rem;
     line-height: 2rem;
 }
 
@@ -45,4 +49,10 @@ ul {
 ol {
     list-style-type: decimal;
     list-style-position: inside;
+}
+
+.accent-text {
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    font-weight: 800;
 }

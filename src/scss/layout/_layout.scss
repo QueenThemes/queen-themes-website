@@ -1,0 +1,22 @@
+/*=================================*/
+/* Base */
+/*=================================*/
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $container-gutter;
+    padding-right: $container-gutter;
+    max-width: calc(#{$desktop-container});
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.image-container {
+    img {
+        display: block;
+        width: 100%;
+    }
+}
