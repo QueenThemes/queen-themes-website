@@ -11,10 +11,13 @@
         align-items: center;
         justify-content: space-between;
         .logo {
-            max-width: 9rem;
+            width: 9rem;
             transition: max-width .3s ease;
             @media screen and (min-width: $laptop-breakpoint) {
-                max-width: 18rem;
+                width: 18rem;
+            }
+            img {
+                max-width: 100%;
             }
         }
         .main-nav ul {
@@ -70,7 +73,7 @@
         background-color: white;
         .logo {
             @media screen and (min-width: $laptop-breakpoint) {
-                max-width: 12rem;
+                width: 12rem;
             }
         }
     }
