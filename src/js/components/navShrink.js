@@ -5,7 +5,7 @@ function mainNavShrink() {
     let trigger = 50;
 
     if(window.innerWidth > 768) {
-        trigger = 110;
+        trigger = 60;
     }
 
     if (scrollYPosition > trigger) {

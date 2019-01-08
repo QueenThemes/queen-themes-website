@@ -4,3 +4,4 @@ NodeList.prototype.forEach = NodeList.prototype.forEach || Array.prototype.forEa
 
 import './components/smoothScroll';
 import './components/navShrink';
+import './components/mobileNav';
